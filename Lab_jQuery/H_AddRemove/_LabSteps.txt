@@ -1,0 +1,175 @@
+﻿jQuery Lab -- Add / Remove
+
+
+1.	檢視 Lab 素材
+
+
+1.1	用編輯器開啟 Lab_0.html，檢視網頁內容與程式
+
+	<Note> 本練習網頁參用了 jQuery 、 Bootstrap 以及 jquery-toast plugin。
+		這三者的官網分別如下:
+		- http://jquery.com/
+		- http://getbootstrap.com/
+		- https://github.com/kamranahmedse/jquery-toast-plugin
+
+	
+1.2	錢老師已將 $.toast() 包裝成 showToast() 函式。
+	使用方式:
+	showToast("標題", "提示文字") 
+
+
+1.3	請找出下列註解
+    // Lab 程式:
+	目前已定義一個陣列，如下:
+
+    var newsList =
+        [
+            { ymd: "2017-01-01", title: "Item 1" },
+            { ymd: "2017-01-01", title: "Item 2" },
+            { ymd: "2017-01-02", title: "Item 3" },
+            { ymd: "2017-01-03", title: "Item 4" },
+            { ymd: "2017-01-04", title: "Item 5" }
+        ];
+
+
+1.4	請寫個迴圈，將陣列內容一一用 showToast 顯示出來，例如:
+
+    for (var i = 0; i < newsList.length; i++) {
+        var newsText = newsList[i].title
+            + " [" + newsList[i].ymd + "]";
+        showToast(newsText);
+    }
+
+
+1.5	另一種寫法:
+
+    $.each(newsList, function (key, obj) {
+        var newsText = obj.title + " [" + obj.ymd + "]";
+        showToast(newsText);
+    })
+
+	<Note> 請比較／討論一下 1.4 與 1.5 這兩種寫法。
+
+
+2.	練習新增內容到「最新消息」
+
+
+2.1	閱讀 https://www.w3schools.com/jquery/jquery_dom_add.asp 的說明
+
+
+2.3	觀察本練習網頁有關於 #latestNews 的結構
+            <ul id="latestNews" class="list-group">
+                <li class="list-group-item">First item</li>
+                <li class="list-group-item">Second item</li>
+                <li class="list-group-item">Third item</li>
+            </ul>
+
+
+2.2	練習寫寫看，以 1.5 的程式為基礎，
+	如何將 newsList 陣列的內容，一一加入成為 #latestNews 的清單項目
+
+
+3.	程式寫法觀摩:
+
+
+3.1	新增清單項目，寫法一:
+
+    $.each(newsList, function (key, obj) {
+        var newsText = obj.title + " [" + obj.ymd + "]";
+        var liHtml = '<li class="list-group-item">'
+            + newsText
+            + "</li>"
+        $("#latestNews").append(liHtml);
+    })
+
+
+3.2	新增清單項目，寫法二:
+    
+	$.each(newsList, function (key, obj) {
+        var newsText = obj.title + " [" + obj.ymd + "]";
+        var $li = $("<li></li>")
+                    .text(newsText)
+                    .addClass("list-group-item");
+        $("#latestNews").append($li);
+    })
+
+
+3.3	新增清單項目，寫法三:
+    
+	$.each(newsList, function (key, obj) {
+        var newsText = obj.title + " [" + obj.ymd + "]";
+        var $li = $("<li></li>")
+                    .text(newsText)
+                    .addClass("list-group-item");
+        $li.appendTo("#latestNews");
+    })
+
+
+3.4	觀摩其他同學的寫法，比較/討論一下你、同學、以及上述三種寫法。
+
+
+4.	移除項目
+
+
+4.1	如何移除原先的三個舊項?
+
+	<提示> https://www.w3schools.com/jquery/jquery_dom_remove.asp
+
+
+4.2	參考解答:
+
+    $("#latestNews").empty();
+	// 或者
+    $("#latestNews li").remove()
+
+
+4.3	請閱讀下列程式的寫法:
+
+    $("#latestNews").empty();
+    // $("#latestNews li").remove()
+
+    var newsList =
+        [
+            { ymd: "2017-01-01", title: "Item 1" },
+            { ymd: "2017-01-01", title: "Item 2" },
+            { ymd: "2017-01-02", title: "Item 3" },
+            { ymd: "2017-01-03", title: "Item 4" },
+            { ymd: "2017-01-04", title: "Item 5" }
+        ];
+
+    $.each(newsList, function (key, obj) {
+        var newsText = obj.title + " [" + obj.ymd + "]";
+        var $li = $("<li></li>")
+                    .text(newsText)
+                    .addClass("list-group-item");
+        $li.appendTo("#latestNews");
+    })
+
+    $("#latestNews li").dblclick(function () {
+        var $li = $(this).remove();
+        $("#latestNews").append($li);
+    })
+
+
+4.4	上述程式的倒數第三行如果改用 detach() 方法，差別在哪?
+
+    $("#latestNews li").dblclick(function () {
+        var $li = $(this).detach();
+        $("#latestNews").append($li);
+    })
+
+	<提示> 滑鼠雙擊清單項目，那些後來重新再加回來的項目，會不會反應滑鼠雙擊事件?
+	<提示> 請對照文件: https://api.jquery.com/detach/
+
+
+4.5	雖然下列的寫法很「阿雜」，
+	但日後你很可能會用到 index() 方法，
+	一併提供參考:
+    
+	$("#latestNews li").dblclick(function () {
+        var iIndex = $(this).index();
+        showToast("", iIndex);
+        var $li = $("#latestNews li").eq(iIndex).detach();
+        $("#latestNews").append($li);
+    })
+

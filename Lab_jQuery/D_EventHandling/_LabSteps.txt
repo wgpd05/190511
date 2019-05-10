@@ -1,0 +1,64 @@
+﻿________________________________________________________________________________
+100  jQuery 事件處理程式
+
+
+1.	用 HTML Editor 開啟本資料夾的 Lab_Events.htm。
+
+
+2.	找到「// 在這裏寫程式」，然後撰寫以下程式:
+            // 在這裏寫程式
+            $("#btnTry").click( 
+                function () { 
+                    console("btnTry clicked");  
+                }  
+            );
+
+
+
+3.	存檔，瀏覽 Lab_Events.htm，點一下「Try」按鈕測試程式。
+
+
+4.	繼續加寫下列程式:
+            $("#report").on(
+                "click",
+                function () { 
+                    $("#report").html("Report:<br>");  
+                }  
+            );
+
+
+5.	存檔，瀏覽 Lab_Events.htm，
+   	先點一下「Try」按鈕，
+   	再點一下 Report 文字。
+
+
+6.	繼續加寫下列程式:
+            $("#panda").on( {
+                "mouseover":
+                function () { 
+                    $("#panda").attr("src", "panda2.jpg");  
+                    console("mouse enter image");
+                },
+                "mouseout":
+                function () { 
+                    $("#panda").attr("src", "panda1.jpg");  
+                    console("mouse leave image");
+                }
+            });
+
+
+7.	存檔，瀏覽 Lab_Events.htm，移動滑鼠指標到圖片上方。
+
+
+8.	最後，加寫下列程式:
+            $("#btnOff").click( 
+                function () { 
+                    $("#panda").off("mouseover");
+                    $("#panda").off("mouseout");
+                }  
+            );
+
+
+9.	存檔，瀏覽 Lab_Events.htm，先點一下「Off」按鈕，
+	再移動滑鼠指標到圖片上方試試看。
+

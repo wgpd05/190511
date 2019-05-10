@@ -1,0 +1,150 @@
+1.	檢視一下 cloud.jpg 的高度與寬度各是多少畫素?  
+	Answer: 高: 168px 寬: 300px 
+	Note: cloud.jpg 采自 http://www.pptbackgroundstemplates.com/clip-art/262-clouds-vector-backgrounds.html
+
+
+2.	建立一個新的 HTML 文件，<body>的內容如下:
+
+<body>
+
+	<div id="banner">
+		<div id="bannerImage"></div>
+		<div id="bannerText">Rolling Clouds</div>
+	</div>
+
+</body>
+
+
+
+3.	在 <header>區塊加入 <style> 元素並且定義 #banner 與 #bannerText 的樣式 （如下），
+	完成後，在瀏覽器看一下目前的進度與效果。
+	(Question: 為何 #banner 的 position 設為 relative ?)
+
+<style type="text/css">
+#banner {
+	position: relative;
+	width: 800px;
+	height: 168px;
+	margin: 0px auto;
+	overflow: hidden;
+	outline: 1px solid gray;
+}
+
+#bannerText {
+	position: absolute;
+	right: 15px;
+	top: 8px;
+	font-family: Arial;
+	font-style: italic;
+	font-size: 20px;
+	color: DarkBlue;
+}
+
+
+</style>
+
+
+
+4.	繼續幫 #bannerImage 指定 cloud.jpg 當背景圖片，重複方向為 repeat-x，如下:
+	(想像一下，現在有一條很寬很寬的橫幅....，下一步，我們要讓它動起來。)
+
+	(Question: 為何高度是 168px, 又為何 width 要設成 1100 以上?)
+
+	
+#bannerImage {
+	position: relative;
+	width: 1800px;
+	height: 168px;
+	background-image: url('cloud.jpg');
+	background-repeat: repeat-x;
+}
+
+
+5.	由於這次課程以 Chrome 為主要測試環境，我們先定義 -webkit- 開頭的關鍵影格，
+	然後，再到  bannerImage 套用關鍵影格，完成後的 #bannerImage CSS 內容如下:
+	(Question: 為何是 right from 0 to 300?)
+
+#bannerImage {
+	position: relative;
+	width: 1800px;
+	height: 168px;
+	background-image: url('cloud.jpg');
+	background-repeat: repeat-x;
+	-webkit-animation: rollImage linear 12s infinite;
+}
+
+@-webkit-keyframes rollImage {
+	from { right: 0px; }
+	to { right: 300px; }
+}
+
+
+6.	OK，用 Chrome 看一下效果，會發現浮雲向左飄去。不過，當我們複製網址，
+	貼到 IE 與 FireFox 時，雲朵卻是靜止不動。
+
+
+7.	繼續加入 -mos- 與 -ms- 的關鍵影格定義，完成後的 <style>...</style> 如下:
+	(如果你用的 IE 與 FireFox 比較新版的話，只要定義 @keyframes 即可，不必
+	 一一定義  -mos- 與 -ms-，也會有動畫效果。)
+
+<style type="text/css">
+#banner {
+	position: relative;
+	width: 800px;
+	height: 168px;
+	margin: 0px auto;
+	overflow: hidden;
+	outline: 1px solid gray;
+}
+
+#bannerText {
+	position: absolute;
+	right: 15px;
+	top: 8px;
+	font-family: Arial;
+	font-style: italic;
+	font-size: 20px;
+	color: DarkBlue;
+}
+
+#bannerImage {
+	position: relative;
+	width: 1800px;
+	height: 168px;
+	background-image: url('cloud.jpg');
+	background-repeat: repeat-x;
+	-webkit-animation: rollImage linear 12s infinite;
+    -moz-animation: rollImage linear 12s infinite;
+    -ms-animation: rollImage linear 12s infinite;
+    animation: rollImage linear 12s infinite;
+}
+
+@-webkit-keyframes rollImage {
+	from { right: 0px; }
+	to { right: 300px; }
+}
+
+@-moz-keyframes rollImage {
+	from { right: 0px; }
+	to { right: 300px; }
+}
+
+@-ms-keyframes rollImage {
+	from { right: 0px; }
+	to { right: 300px; }
+}
+
+@keyframes rollImage {
+	from { right: 0px; }
+	to { right: 300px; }
+}
+
+</style>
+
+
+
+
+
+
+
+

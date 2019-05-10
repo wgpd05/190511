@@ -1,0 +1,15 @@
+.beta-ribbon-wrapper {
+	top: 0px; width: 85px; height: 88px; right: 0px; overflow: hidden; position: absolute;
+}
+.beta-ribbon {
+	padding: 7px 0px; left: -5px; top: 15px; width: 120px; text-align: center; color: rgb(106, 99, 64); font-weight: normal; position: relative; cursor: pointer; -ms-transform: rotate(45deg); box-shadow: 0px 0px 3px rgba(0,0,0,0.3); background-color: rgb(255, 234, 148); text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px; -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3); -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+.beta-ribbon:hover {
+	background-color: rgb(255, 234, 94);
+}
+.beta-ribbon a {
+	color: rgb(57, 57, 57); text-decoration: none;
+}
+.beta-ribbon:hover a {
+	text-decoration: underline;
+}

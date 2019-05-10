@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+  #test {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: Green;
+    -webkit-animation: changeColor 10s;
+  }
+  
+  @-webkit-keyframes changeColor {
+     0% { background-color: Red; width: 100px; height: 100px; left: 10px; top: 10px;}
+    50% { background-color: Blue; width: 200px; height: 200px; left: 300px; top: 300px; }
+   100% { background-color: Green; width: 100px; height: 100px; left: 10px; top: 10px; }
+  } 
+  
+</style>
+</head>
+<body>
+
+<div id="test">
+</div>
+
+</body>
+</html>

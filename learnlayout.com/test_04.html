@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        #main {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+<div id="main">
+設定區塊元素的 width 屬性，可以避免該元素從左到右撐滿容器，然後你可以設定左右外邊距（margin-left 與 margin-right）為 auto 來使其水平居中。元素在顯示的時候，只會顯示到你所指定的寬度，然後剩餘的寬度平均的散落在左右兩邊的邊距上。
+
+唯一的問題是，當瀏覽器視窗寬度比元素的寬度還要窄時，瀏覽器就會出現水平捲軸。讓我們接著來改進這個狀況......
+
+</div>
+
+<hr>
+<input type="button" id="btnTest" value="Test">
+<script>
+    btnTest.onclick = function () {
+        alert("width: " + main.offsetWidth );
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+本練習檔案源自於 Brad Schiff 先生製播的教學影片。
+原文網址: http://learnwebcode.com/responsive-web-design-tutorial/
+YouTube 影片網址: https://www.youtube.com/watch?v=BIz02qY5BRA
+
+
+
+
+1.	初步體驗 Responsive Design 的原理與效果
+
+
+1-1	用瀏覽器開啟 index.html，刻意逐步縮小瀏覽器視窗的寬度。
+	觀察: 圖文區的畫面始終是三欄式設計。
+
+
+1-2	在網頁編輯器開啟 index.html 與 css/main.css，並請瀏覽一遍文件內容。
+
+
+1-3	在 index.html 的 </head> 前一行，加入下列這行（引用樣式檔案）:
+
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+1-4	在 css 資料夾，新增一個 Style Sheet 檔，檔名: responsive.css，內容如下:
+
+@media screen and (max-width: 900px) {
+
+    body {
+        color: red;
+    }
+
+}
+
+
+1-5	在瀏覽器檢視 index.html，刻意逐步縮小瀏覽器視窗的寬度，
+	當視窗寬度小於 900 畫素時，字體顏色會變成紅色。
+
+
+
+
+2.	遇到畫面較窄的裝置時，改走兩欄式設計
+
+
+2-1	檢視 main.css 有關於 div.one-third 的設計
+	<Note> 原作者將畫面分為三欄，各 30%，合計 90%，margin 各留 5%，剛好 100%。
+
+div.one-third {
+	width: 30%;
+	float: left;
+	margin-right: 5%;
+}
+
+div.one-third-last {
+	margin: 0;
+}
+
+
+2-2	找出 index.html 套用上述類別的那三個 div
+	<Note> 除了 one-third，這些 div 還分別套用哪些 class，先有個印象，我們稍後會用到。
+
+
+2-3	編輯 responsive.css，改成下列內容，完成後，在瀏覽器檢視 index.html。
+	<Note> 刻意縮小瀏覽器的寬度，寬度小於 900 畫素時，畫面會改成兩欄式設計。
+	<Note> 請問為什麼是 47.5% ?
+
+@media screen and (max-width: 900px) {
+
+    div.one-third {
+        width: 47.5%;
+    }
+
+    div.one-third-second {
+        margin: 0;
+    }
+
+}
+
+
+2-4	繼續在 @media 大括號裏頭加入 div.one-third-last 的各項屬性(如下)，
+	完成後，在瀏覽器檢視 index.html，原本的第三欄（貓咪那欄）跨兩欄寬度。
+	<Note> 為什麼圖片會跟著縮放大小?
+	<Hint> 請查閱 main.css 有關於 img 元素的樣式定義。
+
+    div.one-third-last {
+        clear: both;
+        float: none;
+        width: auto;
+        padding: 20px 0 0 0;
+    }
+
+
+
+
+3.	遇到畫面更窄的裝置時（例如手機），改走單欄式設計
+
+
+3-1	編輯 responsive.css，加上另一個 @media 區塊（如下），完成後，在瀏覽器檢視 index.html。
+	<Note> 刻意縮小瀏覽器的寬度，寬度小於 500 畫素時，畫面會改成單欄式設計。
+	<Note> 請問為什麼原作者不採用改寫而是另外定義一個 mobile-collapse 類別呢?
+
+@media screen and (max-width: 500px) {
+	
+	div.mobile-collapse {
+		width: auto;
+		float: none;
+		margin-right: 0;
+	}
+	
+	.hide-mobile {
+		display: none;
+	}
+
+}
+
+
+3-2	請找出有套用 hide-mobile 樣式類別的網頁內容，觀察這些內容是否在畫面寬度
+	不足 500 畫素時，消失不見。
+
+
+
+
+4.	導覽列也要採用 Responsive Design 觀念
+
+4-1	編輯 responsive.css，在 @media screen and (max-width: 900px) 的
+	右大括號前，加入下列內容:
+
+	div.nav ul li {
+		width: 25%;
+		border-bottom: 1px solid #bababa;
+	}
+
+
+4-2	完成後，在瀏覽器測試 index.html。
+
+
+4-3	編輯 responsive.css，在 @media screen and (max-width: 500px) 的
+	右大括號前，加入下列內容:
+
+	div.nav ul li {
+		width: 50%;
+		font-size: 85%;
+	}
+
+
+4-4	完成後，在瀏覽器測試 index.html。
+

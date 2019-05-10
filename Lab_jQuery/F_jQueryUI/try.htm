@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>accordion demo</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
+</head>
+<body>
+ 
+<div id="accordion">
+  <h4>Section 1</h4>
+  <div>
+    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget.
+    Integer ut neque. Vivamus nisi metus, molestie vel, gravida in,
+    condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros.
+    Nam mi. Proin viverra leo ut odio.</p>
+  </div>
+  <h4>Section 2</h4>
+  <div>
+    <p>Sed non urna. Phasellus eu ligula. Vestibulum sit amet purus.
+    Vivamus hendrerit, dolor aliquet laoreet, mauris turpis velit,
+    faucibus interdum tellus libero ac justo.</p>
+  </div>
+  <h4>Section 3</h4>
+  <div>
+    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus.
+    Quisque lobortis.Phasellus pellentesque purus in massa.</p>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+</div>
+ 
+<script>
+
+  // $("#accordion").accordion();
+  // $("#accordion").accordion({ active: 2 });
+  // $("#accordion").accordion({ collapsible: true });
+  // $("#accordion").accordion({ event: "mouseover" });
+  $("#accordion").accordion({ header: "h4" });
+  $("#accordion").accordion( "destroy" );
+
+
+  $("#accordion").append("<h4>Section New</h4><div>new content<br>Line2</div>");
+  $("#accordion").accordion({ header: "h4" });
+
+
+</script>
+ 
+</body>
+</html>

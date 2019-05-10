@@ -1,0 +1,58 @@
+﻿________________________________________________________________________________
+100  安裝
+
+1. 	連接到 jQuery 的官網: http://jquery.com/
+
+
+2. 	點按 Download，閱讀網頁說明。
+
+
+3. 	試著下載其中一個版本的 jQuery 檔案
+	<Note> 本資料夾的 jquery.js，即是循上述步驟下載回來的
+	jquery-版本.min.js，然後改名為 jquery.js
+
+
+
+________________________________________________________________________________
+200  Hello jQuery 
+
+1. 	在 A_Start 資料夾新建一個 html 文件，檔名: hello.htm，
+	內容如下: (請留意我們引用了剛才的 jquery.js)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        // 程式放在這裏
+    </script>
+</head>
+<body>
+    <!-- 文件的內容放在這裏 -->
+</body>
+</html>
+
+
+
+2. 	將下列文字貼到「<!-- 文件的內容放在這裏 -->」:
+
+<body>
+    <!-- 文件的內容放在這裏 -->
+    <div>Hello! jQuery</div>
+</body>
+
+
+3. 	將下列程式貼到「// 程式放在這裏」<Note>完成後的檔案內容請參見 hello_OK.htm
+        $(document).ready(function () {
+            $("div").click(function () {
+                $(this).hide("slow").show("fast");
+            });
+        });
+
+
+4.	存檔並且瀏覽 hello.htm。
+
+
+5.	點一下網頁的 Hello! jQuery 文字。
+	<Note> Hello! jQuery 這段文字應該會消失再隱藏。
+

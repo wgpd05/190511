@@ -1,0 +1,199 @@
+Lab -- Bootstrap 之 Modal 對話盒
+
+
+
+
+1.	檢視 Lab 素材
+
+
+1.1	在瀏覽器檢視 Lab_0.html，現階段已預先置入一個登入表單
+
+
+1.2	用編輯器開啟 Lab_0.html，檢視網頁內容與程式
+
+	<Note> 本練習網頁參用了 jQuery 、 Bootstrap 以及 jquery-toast plugin。
+		這三者的官網分別如下:
+		- http://jquery.com/
+		- http://getbootstrap.com/
+		- https://github.com/kamranahmedse/jquery-toast-plugin
+
+
+
+
+2.	套用 Bootstrap 的 Modal 元件
+
+
+2.1	找到 <!-- 對話盒放這邊 --> 用一個 div 包住 form，
+	新的 div 套用 class="modal-dialog" 屬性，像這樣:
+
+	<div class="modal-dialog">
+		<form>
+			...
+		</form>
+	</div>
+
+	<Note>完成之後，在瀏覽器檢視作品
+
+
+2.2	用下列的 div 包住 2.1 的內容:
+
+	<div id="loginModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<form>
+				...
+			</form>
+		</div>
+	</div>
+
+
+2.3	完成 2.2 之後，在瀏覽器檢視作品: 你會發現登入表單不見了，
+	沒關係，請找到 <!-- triggerLoginButton 觸發按鈕放這邊 -->，
+	然後置入下列內容:
+        
+        <button type="button" class="btn btn-default btn-lg"
+                id="triggerLoginButton"
+                data-toggle="modal" data-target="#loginModal">
+            登入
+        </button>
+
+	
+2.4	在瀏覽器檢視作品，點按「登入」按鈕
+
+	<Note> 請想想看，為什麼 data-target 要填 #loginModal ?
+
+	<Note> <button> 是因為什麼，才有了叫喚出對話盒的功能?
+
+
+
+
+3.	繼續美化登入對話盒。
+
+
+3.1	剛才的登入對話盒，整個顏色都灰掉了，Bootstrap 原本有什麼安排嗎?
+	請先觀察下列 HTML 的結構:
+
+        <!-- 對話盒放這邊 -->
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+3.2	將之前 <form></form> 的內容，
+	整個貼進 3.1 <div class="modal-body"> 裡頭，
+	完成後，將 3.1 的內容，複製貼回 Lab_0.html 取代原本的 loginModal
+
+
+3.3	在瀏覽器檢視作品: 這次應該就很像對話盒了
+
+
+3.4	找出 <div class="modal-header"> 這行，置入對話盒標題:
+
+	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	<h4>請登入</h4>
+
+	<Note> 在瀏覽器檢視作品，叫出對話盒之後，點按右上角的「X」。
+
+	<Note> 「X」按鈕是套用了什麼，才有了關閉對話盒的功能?
+
+
+3.5	找出 cancelButton 「取消」這個按鈕，幫它增加一個自訂屬性:
+	data-dismiss="modal"
+
+	<Note> 在瀏覽器檢視作品，叫出對話盒之後，點按「取消」按鈕測試。
+
+
+3.6	在 <head> 置入下列樣式定義:
+    <style>
+        .modal-header, h4, .close {
+            background-color: #5cb85c;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        .modal-footer {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+
+3.7	「登入」、「取消」按鈕整個挪到右側:
+	<div class="pull-right">
+		<button>...</button>
+		<button>...</button>
+	</div>
+
+
+3.8	最後，找出 <div class="modal-footer"> 對話盒頁尾區，置入:
+    <p>
+        還不是會員嗎? <a href="#">加入我們</a> | 
+        <a href="#">忘記密碼?</a>
+    </p>
+
+
+
+
+4.	進一步控制對話盒功能
+
+
+4.1	找出 triggerLoginButton 觸發登入對話盒的那個按鈕，幫它加
+	上一個自訂屬性: data-backdrop="static"
+	完成之後，在瀏覽器檢視作品，測試一下: 
+	現在，點按對話盒外頭，無法關閉對話盒
+	只能透過「X」，「取消」等按鈕才能關閉對話盒
+
+
+4.2	將 triggerLoginButton 觸發登入對話盒的那個按鈕，改成這樣: (data-* 都去掉)
+        <button type="button" class="btn btn-default btn-lg"
+                id="triggerLoginButton">
+            登入
+        </button>
+
+
+4.3	找出 // Lab 程式: 寫作下列程式，以程式叫喚出對話盒:
+
+    $("#triggerLoginButton").click(function () {
+        $("#loginModal").modal();
+    });
+
+
+4.4	將程式再改成:
+
+    $("#triggerLoginButton").click(function () {
+        $("#loginModal").modal( { backdrop: "static" } );
+    });
+
+	<Note> 請在瀏覽器測一下 4.3 與 4.4 有何不同
+
+
+4.5	針對 loginButton 寫作 click 事件處理函式，
+	呼叫 .modal("hide") 關閉對話盒:
+    $("#loginButton").click(function () {
+        // 資料檢查
+        // if (OK) {
+        $("#loginModal").modal("hide");
+    })
+
+
+(Optional)
+4.6	寫作 hidden.bs.modal 事件處理函式:
+    $("#loginModal").on("hidden.bs.modal", function () {
+        alert("對話盒已關閉");
+    })
+
+
+
+
+
+

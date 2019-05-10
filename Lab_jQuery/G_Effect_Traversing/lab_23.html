@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.toast.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="page-header"><h2>哪一隻是貓?</h2></div>
+
+        <div class="row" id="divPets">
+
+            <div class="col-sm-4">
+                <img id="imgDog"
+                     src="images/dog.jpeg"
+                     class="pet img-responsive img-thumbnail" 
+                     data-species="狗" />
+            </div>
+
+            <div class="col-sm-4">
+                <img id="imgCat"
+                     src="images/cat.jpeg"
+                     class="pet img-responsive img-thumbnail" 
+                     data-species="貓" />
+            </div>
+
+            <div class="col-sm-4">
+                <img id="imgRabbit"
+                     src="images/rabbit.jpeg"
+                     class="pet img-responsive img-thumbnail" 
+                     data-species="兔子" />
+            </div>
+
+        </div>  <!-- end of row -->
+
+    </div> <!-- end of container -->
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.toast.js"></script>
+
+    <script>
+
+// 使用方式:
+// showToast("標題", "提示文字") 例如:
+// showToast("Hint", "請點一下正確的圖案");
+function showToast(heading, message) {
+    $.toast({
+        text: message, // Text that is to be shown in the toast
+        heading: heading, // Optional heading to be shown on the toast
+        icon: 'warning', // Type of toast icon
+        showHideTransition: 'fade', // fade, slide or plain
+        allowToastClose: true, // Boolean value true or false
+        hideAfter: 2000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+        stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+        position: 'top-right', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+        textAlign: 'left',  // Text alignment i.e. left, right or center
+        loader: true,  // Whether to show loader or not. True by default
+        loaderBg: '#9ec600',  // Background color of the toast loader
+        beforeShow: function () { }, // will be triggered before the toast is shown
+        afterShown: function () { }, // will be triggered after the toat has been shown
+        beforeHide: function () { }, // will be triggered before the toast gets hidden
+        afterHidden: function () { }  // will be triggered after the toast has been hidden
+    });
+}
+
+
+$(function () {
+    $(".pet").mouseenter(function () {
+        $(this).removeClass("img-thumbnail");
+    })
+
+    $(".pet").mouseleave(function () {
+        $(this).addClass("img-thumbnail");
+    })
+
+    // 請接著寫作
+    // Lab 程式:
+
+    showToast("Hint", "請點一下正確的圖案");
+
+    $(".pet").click(function () {
+        var species = $(this).data("species");
+        showToast("Hint", "我是" + species)
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})  // end of init.
+
+    </script>
+
+</body>
+</html>

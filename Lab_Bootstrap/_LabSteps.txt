@@ -1,0 +1,528 @@
+1.	安裝 Bootstrap
+
+
+1.1	瀏覽 Bootstrap 3.3 的官方網站，網址: 
+    https://getbootstrap.com/docs/3.3/
+
+
+1.2	點按 "Download Bootstrap"(兩次)，解壓縮下載回來的 .zip 檔，
+	檢視資料夾架構與檔案清單。
+
+
+1.3	觀察本工作目錄的資料夾架構
+	(Note: 與上述資料夾架構相同。)
+
+
+1.4	確認 js 資料夾有多一個 jquery.js 檔案。
+
+
+1.5	在本工作目錄建立一個新的 HTML文件，檔名: lab.html，初始內容如下:
+	(Note: 請分別說明 link 與兩個 <script> 區塊的作用。)
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+2.	建立導覽列
+
+
+2.1	連往 Bootstrap 官方網站，網址: 
+    https://getbootstrap.com/docs/3.3/
+
+
+2.2	點按畫面最上方的 Component 連結，
+
+
+2.3	點按右方邊欄的「Navbar」。
+
+
+2.4	選取並且複製 EXAMPLE 區的 HTML 內容
+
+
+2.5	貼入複製的內容到 lab.html 的 <body> 區塊 
+	(建議在 <script>之前)。
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+2.6	class="container-fluid" 若是改成 class="container"，有何差別？
+
+
+2.7	瀏覽器的視窗寬度調小到一定程度時，導覽列會消失，
+	取而代之在右上角多出一個三個橫線的按鈕，
+	請試著找出那三橫的 HTML 元素。
+
+
+2.8	導覽列"Drowdown"展開後的子選單，內含一些分隔線，是怎麼做到的？
+
+
+2.9	導覽列有兩個項目視覺上是靠向右邊的，請問是哪一個類別的效果？
+
+
+
+
+3.	Jumbotron
+
+
+3.1	點按 Bootstrap 官方網站畫面最上方的 Component 連結
+
+
+3.2	點按右方邊欄的「Jumbotron」。
+
+
+3.3	選取並且複製 EXAMPLE 區的 HTML 內容，
+
+
+3.4	貼入複製的內容到 lab.html 的 <body> 區塊(建議在 <script>之前)。
+
+<div class="jumbotron">
+  <h1>Hello, world!</h1>
+  <p>...</p>
+  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+</div>
+
+
+3.5	在上述 div 額外多置入一層 div 並且套用 container 樣式類別(如下)，
+	完成後，觀察該樣式類別的置中對齊效果。
+
+<div class="jumbotron">
+	<div class="container">
+	  <h1>Hello, world!</h1>
+	  <p>...</p>
+	  <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+	</div>
+</div>
+
+
+3.6	<a> 超連結因為套用了什麼設定，所以被 Bootstrap 改成按鈕外觀？
+
+
+3.7	btn-lg 若改成 btn-sm 或者 btn-md，有何差別呢？
+
+
+3.8	btn-primary 若是改成 btn-success，外觀有何變化？
+
+	<Note> 關於顏色，本練習稍後會再談到。
+
+
+
+
+4.0	Bootstrap的版面分割功能。
+
+
+4.1	在 <script> 前一行，置入下列 HTML 內容，完成後，在瀏覽器檢視作品。
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3" 
+                 style="background-color: gray; min-height: 300px">
+
+            </div>
+        </div>
+    </div>
+
+
+4.2	將上述 col-sm-3 改成 col-sm-6，存檔，再用瀏覽器檢視作品。
+	
+	<Note> 
+		4.1 時，灰色背景的 div 大約佔據畫面 1/4，
+		如今大約佔據畫面一半。
+
+	<Note> 3, 6, ...，所以，全寬是 12 嗎?
+
+
+4.3	請閱讀 https://getbootstrap.com/docs/3.3/css/#grid 有關於 
+	Bootstrap 之 Grid 系統的說明。
+
+	<Note> col-xs-4、col-sm-4、col-md-4、col-lg-4，它們差在哪𥚃？
+
+
+4.4	如果要分成四欄，我們目前的 Lab 作品應該怎麼修改才好呢?
+
+
+	<防雷頁>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+        </div>
+    </div>
+
+
+
+5.	試用 Panel 功能	
+
+5.1	Bootstrap 官方網站 https://getbootstrap.com/docs/3.3/
+	點按畫面最上方的 Component 連結
+
+
+5.2	點按右方邊欄的「Panel」。
+
+
+5.3	找到 Panel with heading 這一節，選取並且複製 HTML 內容，
+	貼入 4.4 最內層的 div，如下:
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>    
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+        </div>
+    </div>
+
+
+5.4	完成後，在瀏覽器檢視作品。
+
+
+5.5	將 Panel title 的標題內容改成 Spring，Panel content 改成:
+
+    <ul class="list-group list-group">
+        <li class="list-group-item">Beginning of Spring 立春</li>
+        <li class="list-group-item">Rain Water 雨水</li>
+        <li class="list-group-item">Waking of Insects 驚蟄</li>
+        <li class="list-group-item">Spring Equinox 春分</li>
+        <li class="list-group-item">Pure Brightness 清明</li>
+        <li class="list-group-item">Grain Rain 穀雨</li>
+    </ul>
+
+
+5.6	參考 lab_56.html 的內容，另外三個分欄分別改成夏秋冬各節氣，
+	為了節省時間，也可以直接複製貼上下列內容:
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Spring</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <ul class="list-group list-group">
+                            <li class="list-group-item">Beginning of Spring 立春</li>
+                            <li class="list-group-item">Rain Water 雨水</li>
+                            <li class="list-group-item">Waking of Insects 驚蟄</li>
+                            <li class="list-group-item">Spring Equinox 春分</li>
+                            <li class="list-group-item">Pure Brightness 清明</li>
+                            <li class="list-group-item">Grain Rain 穀雨</li>
+                        </ul>
+
+                    </div>
+                </div>    
+
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Summer</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <ul class="list-group list-group">
+                            <li class="list-group-item">Beginning of Summer 立夏</li>
+                            <li class="list-group-item">Grain Full 小滿</li>
+                            <li class="list-group-item">Grain in Ear 芒種</li>
+                            <li class="list-group-item">Summer Solstice 夏至</li>
+                            <li class="list-group-item">Slight Heat 小暑</li>
+                            <li class="list-group-item">Great Heat 大暑</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Autumn</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <ul class="list-group list-group">
+                            <li class="list-group-item">Beginning of Autumn 立秋</li>
+                            <li class="list-group-item">Limit of Heat 處暑</li>
+                            <li class="list-group-item">White Dew 白露</li>
+                            <li class="list-group-item">Autumnal Equinox 秋分</li>
+                            <li class="list-group-item">Cold Dew 寒露</li>
+                            <li class="list-group-item">Frost′s descent霜降</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-3">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Winter</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <ul class="list-group list-group">
+                            <li class="list-group-item">Beginning of Winter 立冬</li>
+                            <li class="list-group-item">Slight Snow 小雪</li>
+                            <li class="list-group-item">Great Snow 大雪</li>
+                            <li class="list-group-item">Winter Solstice 冬至</li>
+                            <li class="list-group-item">Slight Cold 小寒</li>
+                            <li class="list-group-item">Great Cold 大寒</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+6.	Bootstrap 的配色系統。
+
+
+6.1	在這次的練習HTML文件找出 Learn more 按鈕:
+
+<a class="btn btn-primary btn-lg" role="button">Learn more</a>
+
+
+6.2	將 btn-primary 分別改成下列四種並且觀察色彩變化:
+	btn-success
+	btn-info
+	btn-warning
+	btn-danger
+
+    
+6.3	在這次的練習HTML文件找出 Spring 春天那個區塊:
+
+
+6.4	將 <div class="panel panel-default"> 改成
+	<div class="panel panel-success">
+
+
+6.5	重複上述步驟，
+	夏天套用 panel-info
+	秋天套用 panel-warning
+	冬天套用 panel-danger
+
+
+6.6	請找出螢幕上方的導覽列，將 class="navbar navbar-default"
+	<Note> 如果改成：class="navbar navbar-inverse" 效果如何?
+
+
+
+
+7.	自訂 Bootstrap 樣式與疑難排解。
+
+
+7.1	在上述試用 Bootstrap 的過程中，經常看到 Bootstrap 的
+	文件應用一組叫做 bs-callout 的樣式，例如:
+	https://getbootstrap.com/docs/3.3/components/#input-groups
+
+
+7.2	可是...，依樣畫葫蘆卻沒有效果，為什麼?
+
+    <div class="container">
+        <div class="bs-callout bs-callout-danger">
+            <h4>Cross-browser compatibility</h4>
+            <p>Avoid using <code>&lt;select&gt;</code> elements here as they cannot be fully styled in WebKit browsers.</p>
+        </div>
+    </div>
+
+
+7.3	Google 「bs-callout css」後，發現下列文件:
+	https://gist.github.com/mattsimpson/9063553
+
+
+7.4	在 css 資料夾建立一個新的 CSS 文件，
+	檔名： style.css，
+	貼入上述 7.3 的文件內容（如下），存檔。
+
+/* Base styles (regardless of theme) */
+.bs-callout {
+    margin: 20px 0;
+    padding: 15px 30px 15px 15px;
+    border-left: 5px solid #eee;
+}
+ 
+.bs-callout h4 {
+    margin-top: 0;
+}
+ 
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+ 
+.bs-callout code,
+.bs-callout .highlight {
+    background-color: #fff;
+}
+ 
+/* Themes for different contexts */
+.bs-callout-danger {
+    background-color: #fcf2f2;
+    border-color: #dFb5b4;
+}
+ 
+.bs-callout-warning {
+    background-color: #fefbed;
+    border-color: #f1e7bc;
+}
+ 
+.bs-callout-info {
+    background-color: #f0f7fd;
+    border-color: #d0e3f0;
+}
+ 
+.bs-callout-danger h4,
+.bs-callout-danger a.alert-link {
+    color: #B94A48;
+}
+ 
+.bs-callout-warning h4,
+.bs-callout-warning a.alert-link {
+    color: #C09853;
+}
+ 
+.bs-callout-info h4,
+.bs-callout-info a.alert-link {
+    color: #3A87AD;
+}
+ 
+.bs-callout a.alert-link {
+    font-weight: bold;
+}
+
+    
+
+7.5	回到我們的 lab.html，在 head 引用 style.css 樣式表:
+
+<link href="css/style.css" rel="stylesheet">
+
+

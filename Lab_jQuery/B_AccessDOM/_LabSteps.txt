@@ -1,0 +1,40 @@
+﻿
+1.	用 HTML Editor 開啟 AccessDOM.html，檢視文件的內容。
+
+
+2.	分別貼入下列程式到「// 在這裏寫程式」，每完成一段，就以瀏覽器測試一次:
+	(此外，請留意 $(xxx) 裏頭 xxx 的語法，完全就跟之前 CSS 教的 Selector 一模一樣。)
+
+
+// 210:
+                $("#report").text("line1<br>Line2");
+
+
+// 220:
+                $("#report").html("line1<br>Line2");
+
+
+// 230:
+                $("#report").append("line1<br>Line2");
+
+
+// 240:
+                var s = $("#report").text();
+				alert(s);
+				// 與 210 相較，有何差別?
+
+
+// 250
+                var s = $("#aTextField").attr("value");
+                $("#report").append(s);
+
+
+// 260
+                var s = $("#aTextField").attr("value", "Hello!");
+				// 一樣是 $.attr(), 250 與 260 差別在哪?
+
+
+// 270
+                var s = $("input[name='radioGroup']").eq(2).attr("checked", "checked");
+                $("#report").append("radio C selected.");
+				<Note> attr() 改用 prop() 代替，有何分別?

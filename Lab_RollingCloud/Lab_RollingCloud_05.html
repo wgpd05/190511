@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#banner {
+	position: relative;
+	width: 800px;
+	height: 168px;
+	margin: 0px auto;
+	overflow: hidden;
+	outline: 1px solid gray;
+}
+
+#bannerText {
+	position: absolute;
+	right: 15px;
+	top: 8px;
+	font-family: Arial;
+	font-style: italic;
+	font-size: 20px;
+	color: DarkBlue;
+}
+
+#bannerImage {
+	position: relative;
+	width: 1800px;
+	height: 168px;
+	background-image: url('cloud.jpg');
+	background-repeat: repeat-x;
+	-webkit-animation: rollImage linear 12s infinite;
+}
+
+@-webkit-keyframes rollImage {
+	from { right: 0px; }
+	to { right: 300px; }
+}
+
+
+
+</style>
+</head>
+<body>
+
+	<div id="banner">
+		<div id="bannerImage"></div>
+		<div id="bannerText">Rolling Clouds</div>
+	</div>
+
+</body>
+</html>

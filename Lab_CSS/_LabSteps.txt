@@ -1,0 +1,11 @@
+﻿連接下列網址並且按照說明步驟進行操作:
+http://www.w3.org/Style/Examples/011/firstcss
+中文版說明:
+http://www.thewebpractice.com/w3c/Style/Examples/011/firstcss-tr.html
+
+
+上述步驟完成後，繼續加入這行到 style 區塊，然後試一下滑鼠飄過超連結的效果:
+a:hover{ position:relative; top:1px; left:1px; }
+
+
+

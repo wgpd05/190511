@@ -1,0 +1,159 @@
+Lab -- Bootstrap 之 Carousel
+
+
+
+
+1.	檢視 Lab 素材
+
+
+1.1	images 有三張圖片，依 CC0 授權，可免費使用，下載網址如下:
+
+	- https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/
+	- https://www.pexels.com/photo/brown-rabbit-53966/
+	- https://www.pexels.com/photo/white-and-gray-siberian-husky-167804/
+
+
+1.2	用編輯器開啟 Lab_0.html，檢視網頁內容與程式
+
+	<Note> 本練習網頁參用了 jQuery 、 Bootstrap 以及 jquery-toast plugin。
+		這三者的官網分別如下:
+		- http://jquery.com/
+		- http://getbootstrap.com/
+		- https://github.com/kamranahmedse/jquery-toast-plugin
+
+
+
+
+2.	套用 Bootstrap 的 Carousel 元件
+
+
+2.1	找出 <!-- HTML 內容放這邊 -->，置入下列內容，id 的值可以自訂:
+
+    <div id="petCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- 圖面下方的小圓點 -->
+
+        <!-- 輪播的圖文清單 -->
+
+        <!-- 左右兩側的翻頁按鈕 -->
+
+    </div>
+
+
+2.2	在 <!-- 輪播的圖文清單 --> 置入下列內容:
+
+    <div class="carousel-inner" role="listbox">
+
+        <!-- 0 -->
+        <div class="item active">
+                <img src="images/dog_800x450.jpeg" />
+        </div>
+
+        <!-- 1 -->
+        <div class="item">
+                <img src="images/cat_800x450.jpeg">
+        </div>
+
+        <!-- 2 -->
+        <div class="item">
+                <img src="images/rabbit_800x450.jpeg">
+        </div>
+
+    </div>
+
+
+	<Note> 第一個項目，也就是編號 0 的那個，active 類別一定要嗎?
+
+	<Note> 在瀏覽器檢視作品。嗯! 圖片如何置中?
+	
+
+2.3	在 style 設定圖片置中:
+        .carousel img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+2.4	加入索引小圓點。
+	找出 <!-- 圖面下方的小圓點 -->，置入下列內容:
+
+    <ol class="carousel-indicators">
+        <li data-target="#petCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#petCarousel" data-slide-to="1"></li>
+        <li data-target="#petCarousel" data-slide-to="2"></li>
+    </ol>
+
+
+	<Note> class="active" 不加，會怎樣呢?
+
+
+2.5	找出 <!-- 左右兩側的翻頁按鈕 -->，置入下列內容:
+    
+	<a class="left carousel-control" href="#petCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#petCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    </a>
+
+
+
+
+3.	設定 Carousel
+
+
+3.1	找出 <!-- 0 --> 編號零的那項，
+	在 <img> 下一行加入下列內容:
+
+    <div class="carousel-caption">
+        <h3>Dog</h3>
+        <p>狗是人類的好朋友</p>
+    </div>
+
+
+3.2	針對編號1，加入下列內容:
+    <div class="carousel-caption">
+        <h3>Cat</h3>
+        <p>人類是貓的好朋友</p>
+    </div>
+
+
+3.3	針對編號2，加入下列內容:
+    <div class="carousel-caption">
+        <h3>Rabbit</h3>
+        <p>真不想跟酒鬼變成好朋友</p>
+    </div>
+
+
+3.4	請試試看，如何變更三個段落的字體與大小?
+
+    .carousel-caption p {
+        font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", "微软雅黑", "メイリオ", "맑은 고딕", sans-serif;
+        font-size: 1.5em;
+    }
+
+
+3.5	請試試看，如何在使用者點按狗狗圖片時，連到下列網址:
+	https://en.wikipedia.org/wiki/Dog
+
+
+(Optional)
+3.6	請練習加入另一張圖片。
+	<Note> https://www.pexels.com 有不少圖片素材
+
+
+3.7	設定輪播速度。
+	找出下列這行:
+	<div id="petCarousel" class="carousel slide" data-ride="carousel">
+
+	加入下列屬性: (三秒鐘輪播一張)
+	data-interval="3000"
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+﻿1.	連接 http://janne.aukia.com/zoomooz/
+   	瀏覽這個 jQuery Plugin 的功能說明，並且試用一下這個 Plugin。
+
+
+2.	點按「Download ZIP File」下載
+
+
+3.	解壓縮 Zip，將 jquery.zoomooz.min.js 複製到本資料夾。
+	<Note> 本資料夾的同名 jquery.zoomooz.min.js 是之前老師下載到的版本。
+
+
+4.	用 HTML Editor 編輯 testZoom.htm，在  <head> 區塊加入以下這行:
+
+	<script type="text/javascript" src="jquery.zoomooz.min.js"></script>
+
+
+5.	在 <head> 區塊宣告美工樣式，如下:
+
+<style>
+.zoomingDemo div {
+	background-color: #F8F8F8;
+	border: 1px solid #EAEAEA;
+	width: 137px;
+	height: 50px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+	float: left;
+}
+</style>
+
+
+6.	網頁的 Body 改成這樣:
+
+<body>
+
+    <p>Here is a demo, click on the elements:</p>
+
+    <div class="zoomingDemo">
+        <div class="zoomTarget" data-targetsize="0.45" data-closeclick="true">Target 1</div>
+        <div>Target 2</div>
+        <div class="zoomTarget">Target 3</div>
+    </div>
+
+</body>
+
+
+7.	存檔，瀏覽試用看看，分別點按三個 div，觀察放大的效果。
+
+
+8.	以 Taget 1 為準，Target 2 與 Target 3 也改用一樣的設定，
+	完成後，再度瀏覽試用看看。

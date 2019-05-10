@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+
+        function console(obj)
+        {
+            $("#report").append(obj + "<br>");
+        }
+
+        $(document).ready(function () {
+            // 在這裏寫程式
+            $("#btnTry").click( 
+                function () { 
+                    console("btnTry clicked");  
+                }  
+            );
+
+            $("#report").on(
+                "click",
+                function () { 
+                    $("#report").html("Report:<br>");  
+                }  
+            );
+
+
+            $("#panda").on( {
+                "mouseover":
+                function () { 
+                    $("#panda").attr("src", "panda2.jpg");  
+                    console("mouse enter image");
+                },
+                "mouseout":
+                function () { 
+                    $("#panda").attr("src", "panda1.jpg");  
+                    console("mouse leave image");
+                }
+            });
+
+            $("#btnOff").click( 
+                function () { 
+                    $("#panda").off("mouseover");
+                    $("#panda").off("mouseout");
+                }  
+            );
+
+        });
+    </script>
+</head>
+<body>
+
+<img id="panda" src="panda1.jpg">
+
+<div id="report">Report:<br></div>
+<hr>
+<form action="" method="put" onsubmit="return false;">
+  <button type="button" id="btnTry">Try</button>
+  <button type="button" id="btnOff">Off</button>
+</form>
+</body>
+</html>

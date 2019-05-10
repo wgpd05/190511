@@ -1,0 +1,70 @@
+﻿________________________________________________________________________________
+
+Lab: 試用與自訂 Bootstrap 套件
+________________________________________________________________________________
+
+A. 請依據 Lab_Bootstrap\_LabSteps.txt 的說明，練習至步驟 2.9。
+	<Note> 可直接開啟 lab_29.html 進行練習
+
+
+B. 瀏覽器視窗變窄時，畫面會出現「☰」功能表按鈕，請試著將其顏色改為紅色。
+
+
+C. 如果完全沒有頭緒，請 Google: 「bootstrap icon-bar color」。
+
+
+D. 假設有位同學在樣式表附加下列設定，為何「☰」功能表按鈕不會變成紅色?
+
+.icon-bar {
+  background-color: red;
+}
+
+
+E. 請閱讀 http://www.w3.org/TR/css3-selectors/#specificity 有關於
+   Specificity 的說明。
+
+
+F. 上述同學將樣式表改成這樣，「☰」功能表按鈕終於變成紅色，為什麼呢?
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: red;
+}
+
+
+G. 假設班上有另一位同學的解法如下。
+   請討論看看兩種解法的異同優劣。
+
+.icon-bar {
+   background-color:#FF0000 !important;
+}
+
+
+
+
+
+________________________________________________________________________________
+
+Lab: 試用 CSS3 元件並且整合進既有網頁
+________________________________________________________________________________
+
+
+A. 瀏覽下列兩個網站，至少試用三個 CSS3 特效。
+（請問你都怎麼尋找元件、試用元件？）
+
+120+ Useful CSS3 Tutorials Examples and Tricks for Designer
+https://www.freshdesignweb.com/css3-tutorials-examples/
+
+30 Pure CSS3 Tutorials & Examples
+http://www.sanwebe.com/2012/08/pure-css3-tutorials-examples
+
+
+（以網頁的第一個元件 "Element CSS Loading" 為例）
+B. 請在一個全新的空白網頁，重現第二排左二的那個動畫。
+
+
+C. 將這個元件擺進前一個 Lab 的 index_35.html，
+   大小位置請正好放在「Learn more」按鈕的右邊。
+
+
+
+

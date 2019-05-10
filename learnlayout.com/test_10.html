@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div {
+            background-color: gray;
+        }
+        .box {
+            background-color: lightblue;
+            float: left;
+            width: 200px;
+            height: 100px;
+            margin: 1em;
+        }
+        .after-box {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        我感覺好像我在漂浮！
+    </div>
+    <div class="after-box">
+        使用 clear 我們就可以將這個 section 區塊移到浮動元素 div 的下方，你可以在這個 section 元素加上一個 clear: left; 來宣告清空所有標示 float: left; 的元素，也可以用 clear: right; 或 clear: both; 來清空 float: right; 或同時清除 float: left 與 float: right 的浮動元素。
+    </div>
+
+</body>
+
+</html>

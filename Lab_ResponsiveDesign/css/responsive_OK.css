@@ -1,0 +1,44 @@
+﻿@media screen and (max-width: 900px) {
+
+    div.one-third {
+        width: 47.5%;
+    }
+
+    div.one-third-second {
+        margin: 0;
+    }
+
+    div.one-third-last {
+        clear: both;
+        float: none;
+        width: auto;
+        padding: 20px 0 0 0;
+    }
+
+	div.nav ul li {
+		width: 25%;
+		border-bottom: 1px solid #bababa;
+	}
+
+}
+
+
+@media screen and (max-width: 500px) {
+	
+	div.mobile-collapse {
+		width: auto;
+		float: none;
+		margin-right: 0;
+	}
+	
+	.hide-mobile {
+		display: none;
+	}
+
+	div.nav ul li {
+		width: 50%;
+		font-size: 85%;
+	}
+
+}
+

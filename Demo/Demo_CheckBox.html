@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+<style>
+body {
+	font-family: Arial;
+}
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+.chkboxSwitch {
+	width: 120px;
+	height: 40px;
+	background: #333;
+	border-radius: 50px;
+	position: relative;
+}
+
+.chkboxSwitch:before {
+	content: 'On';
+	position: absolute;
+	top: 12px;
+	left: 13px;
+	height: 2px;
+	color: #26ca28;
+	font-size: 16px;
+}
+
+.chkboxSwitch:after {
+	content: 'Off';
+	position: absolute;
+	top: 12px;
+	left: 84px;
+	height: 2px;
+	color: WhiteSmoke;
+	font-size: 16px;
+}
+
+.chkboxSwitch label {
+	display: block;
+	width: 62px;
+	height: 22px;
+	border-radius: 50px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 9px;
+	z-index: 1;
+	left: 12px;
+	background: #ddd;
+}
+
+.chkboxSwitch input[type=checkbox]:checked+label {
+	left: 50px;
+	background: #26ca28;
+}
+
+</style>
+</head>
+<body>
+
+	<p>Checkbox as switch:</p>
+
+	<div class="chkboxSwitch">
+		<input type="checkbox" value="1" id="chkTest" name="chkTest">
+		<label for="chkTest"></label>
+	</div>
+	
+
+</body>
+</html>

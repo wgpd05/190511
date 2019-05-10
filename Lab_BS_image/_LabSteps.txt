@@ -1,0 +1,185 @@
+﻿Bootstrap 練習 -- Responsive Images
+
+
+1.	檢視並試用本 Lab 完成品
+
+
+1.1	在瀏覽器瀏覽 Lab_OK.html
+
+	<Note> 網頁有三張圖片，由左至右分別為狗、貓、兔。
+
+	<Note> 三張圖片依 CC0 授權，可免費使用，下載網址如下:
+	- https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/
+	- https://www.pexels.com/photo/brown-rabbit-53966/
+	- https://www.pexels.com/photo/white-and-gray-siberian-husky-167804/
+
+
+1.2	請先想想看，該如何做出這樣的網頁?
+
+
+1.3	用編輯器開啟 Lab_OK.html，檢視網頁內容與程式
+
+	<Note> 本練習網頁參用了 jQuery 、 Bootstrap 以及 jquery-toast plugin。
+		這三者的官網分別如下:
+		- http://jquery.com/
+		- http://getbootstrap.com/
+		- https://github.com/kamranahmedse/jquery-toast-plugin
+
+	
+	<Note> 錢老師已針對三張圖片分別寫作 
+		mouseenter 、 mouseleave 、 click 事件處理函式
+		程式這部分暫且先不管，我們先專注於應用 Bootstrap 處理畫面
+
+
+
+
+2.	切版，分成三欄
+
+
+2.1	分別用瀏覽器與編輯器檢視 lab_0.html
+
+	<Note> 嗯! 我知道畫面很糟，慢慢會變好! :-)
+
+
+2.2	運用 Lab_Bootstrap 學到的 Grid System，如何將畫面切成三欄呢?
+
+<防雷頁>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Note> 參考解答:
+
+    <div class="container">
+        <div class="page-header"><h2>哪一隻是貓?</h2></div>
+
+        <div class="row">
+
+            <div class="col-sm-4" style="background-color: gray; min-height: 200px;">
+
+            </div>
+
+            <div class="col-sm-4" style="background-color: darkgreen; min-height: 200px;">
+
+            </div>
+
+            <div class="col-sm-4" style="background-color: darkolivegreen; min-height: 200px;">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+3.	將圖片置入各欄
+
+
+3.1	將 id="imgDog" 的那張圖片（剪下/貼上）搬進左邊那欄
+
+	<Note> 怎麼狗狗還是那麼大隻啊!?
+
+
+3.2	請閱讀 https://www.w3schools.com/bootstrap/bootstrap_images.asp
+	特別注意 Responsive Images 的說明
+
+
+3.3	針對 id="imgDog" 那張圖，
+	加上 img-responsive img-thumbnail 兩個類別
+	如下:
+    <img id="imgDog"
+            src="images/dog.jpeg"
+            class="img-responsive"
+            data-species="狗" />
+
+
+3.4	貓、兔那兩張圖，也請如法泡製分別置入其他兩欄。
+
+
+3.5	請想想看，如果要圖片無縫接在一起，該怎麼做呢?
+
+<防雷頁>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<Note> 參考解答:
+	針對三個 class="col-sm-4" 的 div，style 屬性都實驗性質地加上:
+	padding-left: 0px; padding-right: 0px;
+
+
+
+
+4.	配合前端工程師的程式
+
+
+4.1	參考 lab_OK.html 在瀏覽器的效果，老闆希望滑鼠移進圖片時，
+	能有略為放大的效果，該怎麼辦呢?
+
+
+4.2	前端工程師在寫作滑鼠相關事件時，想用一個類別選擇器將三張
+	圖片一次選起來統一掛上事件處理程序，該怎麼進行?
+
+
+4.3	針對 4.2，簡單: 網頁美術與前端工程師商量好就好。
+	例如，我們針對三張 img 的類別清單都加上 pet，
+	於是，類別清單就變成:
+	class="pet img-responsive"
+
+
+4.4	請查閱: https://www.w3schools.com/bootstrap/bootstrap_images.asp
+	特別注意 Thumbnail 的說明
+
+	<Note> 
+	如果加上 img-thumbnail，圖片就會因此加上框線，並且變得略小一些，
+	可否用來達成 4.1 的效果呢?
+
+
+4.5	三張 img 的類別清單都改成:
+	class="pet img-responsive img-thumbnail"
+
+
+4.5	針對三個 class="col-sm-4" 的 div，都去掉 style 屬性，舉例來說:
+
+    <div class="col-sm-4">
+
+        <img id="imgDog"
+                src="images/dog.jpeg"
+                class="pet img-responsive img-thumbnail"
+                data-species="狗" />
+
+    </div>
+

@@ -1,0 +1,3 @@
+﻿本練習檔案源自於 Brad Schiff 先生製播的教學影片。
+原文網址: http://learnwebcode.com/responsive-web-design-tutorial/
+YouTube 影片網址: https://www.youtube.com/watch?v=BIz02qY5BRA

@@ -1,0 +1,100 @@
+﻿【需求分析與問題定義】
+
+
+The Design Thinking Process
+https://www.youtube.com/watch?v=_r0VX-aU_T8
+
+
+User-Centered Design Basics
+https://www.usability.gov/what-and-why/user-centered-design.html
+
+
+什麼是設計思考？(What is Design Thinking)
+https://www.youtube.com/watch?v=Ap3qEVzYElk
+
+
+The three ways that good design makes you happy | Don Norman
+https://www.youtube.com/watch?v=RlQEoJaLQRA
+
+
+The first secret of great design | Tony Fadell
+https://www.youtube.com/watch?v=9uOMectkCCs
+
+
+PEAK DESIGN 快裝神奇背帶 Slide／Slide Lite
+https://youtu.be/npXjBetOU0E
+
+
+
+
+【使用者操作介面設計】
+
+
+Beginning Graphic Design
+https://edu.gcfglobal.org/en/beginning-graphic-design/
+
+
+設計配色完整攻略
+https://www.shutterstock.com/zh-Hant/blog/complete-guide-color-in-design
+
+
+未來人來了 -- 使用者體驗設計師
+https://www.youtube.com/watch?v=Z64bfjfRkfs
+
+
+黏性使用體驗（二）淺談 App 的通知與提醒設計
+https://medium.com/uxeastmeetswest/%E9%BB%8F%E6%80%A7%E4%BD%BF%E7%94%A8%E9%AB%94%E9%A9%97-%E4%BA%8C-%E6%B7%BA%E8%AB%87-app-%E7%9A%84%E9%80%9A%E7%9F%A5%E8%88%87%E6%8F%90%E9%86%92%E8%A8%AD%E8%A8%88-ffeffb52af0
+
+
+
+
+【雛型建構與線框工具】
+
+
+PENCIL PROJECT
+https://pencil.evolus.vn/
+
+
+Paper Prototyping: The 10-Minute Practical Guide
+https://www.uxpin.com/studio/blog/paper-prototyping-the-practical-beginners-guide/
+
+
+PRINTABLE GRIDS FOR DESIGN WIREFRAMING
+http://sneakpeekit.com/
+
+
+Rapid Prototyping 1 of 3: Sketching & Paper Prototyping
+https://www.youtube.com/watch?v=JMjozqJS44M
+
+
+TGD 3151 Game Design Fundamental - Paper Prototyping
+https://www.youtube.com/watch?v=JMoVMFkU8gE
+
+
+Wizard of Oz Prototyping Technique
+https://www.youtube.com/watch?v=YmcuN3NlnDU
+
+
+
+
+【課後閱讀與討論】
+
+
+設計有問題，多半是誰的問題？（上篇）
+https://vide.tw/3060
+
+
+設計有問題，多半是誰的問題？(下篇)
+http://conversionlab.co/2015/12/21/%E8%A8%AD%E8%A8%88%E6%9C%89%E5%95%8F%E9%A1%8C%EF%BC%8C%E5%A4%9A%E5%8D%8A%E6%98%AF%E8%AA%B0%E7%9A%84%E5%95%8F%E9%A1%8C%EF%BC%9F%E4%B8%8B%E7%AF%87/
+
+
+Forty UI/UX design examples
+https://www.youtube.com/watch?v=6caUnPRHMGs
+
+
+蘋果的 Human Interface Guidelines
+https://developer.apple.com/design/
+
+
+Google Design
+https://design.google/

@@ -1,0 +1,33 @@
+﻿________________________________________________________________________________
+100  以 jQuery 存取 CSS 樣式
+
+
+1.	用 CSS Editor 開啟本資料夾的 style.css 檔案，
+	 然後，找出 並檢視 beta-ribbon 這個 CSS 類別樣式。
+
+
+2.	用 HTML Editor 開啟本資料夾的 Lab_CSS.htm。
+
+
+3.	將以下這行貼到 </head> 的前一行:
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+
+4.	找到「// 在這裏寫程式」，然後撰寫以下程式:
+$("#betaRibbon").addClass("beta-ribbon");
+
+
+5.	存檔，瀏覽 Lab_CSS.htm，點一下按鈕，觀察「Beta」字樣的變化。
+
+	<Note> 請 Google 一下 jQuery removeClass toggleClass 並且試用看看。
+
+
+6.	繼續加寫下列程式，存檔，瀏覽 Lab_CSS.htm，點一下按鈕，觀察字體變化。
+$("#betaRibbon").css("font-family", "Arial");
+
+
+
+7.	繼續加寫下列程式，存檔，再測一次效果。
+$("#betaRibbon").css({"font-family": "Arial", "font-size": "1.2em"});
+
+

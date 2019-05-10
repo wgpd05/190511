@@ -1,0 +1,39 @@
+﻿試用 Accordion
+
+0.	瀏覽 accordion 元件的官方文件:
+   http://api.jqueryui.com/accordion/
+
+
+1.	瀏覽 Lab_Accordion.htm
+
+
+2.	以HTML Editor 開啟 Lab_Accordion.htm，檢視網頁的元素架構。
+
+3.	在 </body> 前面的 <script> 區塊加入這行:
+	$("#accordion").accordion();
+4.	存檔，瀏覽 Lab_Accordion.htm 看看效果。
+
+
+5.	剛才那行修改成這樣: 
+	$("#accordion").accordion({ active: 2 });
+6.	存檔，瀏覽 Lab_Accordion.htm 看看效果。
+
+
+7. 剛才那行修改成這樣: 
+	$("#accordion").accordion({ collapsible: true });
+8. 存檔，瀏覽 Lab_Accordion.htm 看看效果。
+
+
+9.	剛才那行修改成這樣: 
+	$("#accordion").accordion({ event: "mouseover" });
+10.	存檔，瀏覽 Lab_Accordion.htm 看看效果。
+
+
+11.	剛才那行修改成這樣: 
+	$("#accordion").accordion({ header: "h4" });
+12.	存檔，瀏覽 Lab_Accordion.htm 看看效果。
+
+
+13.	將全部的 h3> 換成 h4>
+	存檔，瀏覽 Lab_Accordion.htm 看看效果。
+
